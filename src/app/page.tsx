@@ -12,6 +12,9 @@ import { GoDotFill } from "react-icons/go";
 import projectsData from "@/data/projects.json";
 import ProjectCard from "@/components/projectCard";
 
+import experienceData from "@/data/experienceandeducation.json";
+import ExperienceCard from "@/components/experiencesCard";
+
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-plus-jakarta-sans",
@@ -36,6 +39,7 @@ export default function Home() {
         <Skills />
         <Projects />
         <ExperiencenEducation />
+        <Certifications />
       </div>
     </div>
   );
@@ -260,8 +264,16 @@ const Projects = () => {
 };
 
 const ExperiencenEducation = () => {
+  const sortedExperiences = [...experienceData].sort((a, b) => b.id - a.id);
+  const filteredExperiences = sortedExperiences.filter(
+    (experience) => experience.type === "experience"
+  );
+  const filteredEducations = sortedExperiences.filter(
+    (experience) => experience.type === "education"
+  );
+
   return (
-    <div className="experienceneducation-container">
+    <div className="experienceneducation-container flex flex-col gap-8">
       <div className="experiences-container">
         <div className="subtitle-container flex flex-row gap-3 items-center justify-center">
           <span className="material-symbols-outlined text-subtitlel">
@@ -271,15 +283,33 @@ const ExperiencenEducation = () => {
             EXPERIENCES
           </h1>
         </div>
+        <div className="experiences-list-container flex flex-col gap-4 p-8">
+          {filteredExperiences.map((experience) => (
+            <ExperienceCard key={experience.id} {...experience} />
+          ))}
+        </div>
       </div>
       <div className="education-container">
         <div className="subtitle-container flex flex-row gap-3 items-center justify-center">
-          <MdSchool className="text-subtitlel" size={24}/>
+          <MdSchool className="text-subtitlel" size={24} />
           <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
             EDUCATION &amp; COURSES
           </h1>
+        </div>
+        <div className="education-list-container flex flex-col gap-4 p-8">
+          {filteredEducations.map((education) => (
+            <ExperienceCard key={education.id} {...education} />
+          ))}
         </div>
       </div>
     </div>
   );
 };
+
+const Certifications = () => {
+  return(
+    <div>
+      <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">CERTIFICATIONS</h1>
+    </div>
+  )
+}
