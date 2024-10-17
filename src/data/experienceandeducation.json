@@ -1,0 +1,80 @@
+[
+    {
+        "id": 0,
+        "title": "BACHELOR OF COMPUTER ENGINEERING",
+        "company": "Telkom University - 3.92/4.00",
+        "yearStart": 2020, 
+        "yearEnd": 2024,
+        "type": "education",
+        "description": "", 
+        "image1": "",
+        "image2": "",
+        "image3": "",
+        "image4": "" 
+    },
+    {
+        "id": 1,
+        "title": "DEPUTY OF DIVISION COORDINATOR",
+        "company": "Physics Laboratory Telkom University",
+        "yearStart": 2021, 
+        "yearEnd": 2023,
+        "type": "experience",
+        "description": "", 
+        "image1": "",
+        "image2": "",
+        "image3": "",
+        "image4": "" 
+    },
+    {
+        "id": 2,
+        "title": "MEMBER OF RESEACH GROUP",
+        "company": "Security Laboratory Telkom University",
+        "yearStart": 2023, 
+        "yearEnd": 2023,
+        "type": "experience",
+        "description": "", 
+        "image1": "",
+        "image2": "",
+        "image3": "",
+        "image4": "" 
+    },
+    {
+        "id": 3,
+        "title": "ENGINEERING SERVICE - INTERN",
+        "company": "PT. Dirgantara Indonesia",
+        "yearStart": 2023, 
+        "yearEnd": 2023,
+        "type": "experience",
+        "description": "", 
+        "image1": "",
+        "image2": "",
+        "image3": "",
+        "image4": "" 
+    },
+    {
+        "id": 4,
+        "title": "DEPUTY OF ASSISTANT COORDINATOR",
+        "company": "I-SMILE Laboratory Telkom University",
+        "yearStart": 2023, 
+        "yearEnd": 2024,
+        "type": "experience",
+        "description": "", 
+        "image1": "",
+        "image2": "",
+        "image3": "",
+        "image4": "" 
+    },
+    {
+        "id": 5,
+        "title": "REACT DEVELOPER - BEGINNER",
+        "company": "Indosat Ooredoo Digital Camp (IDCamp) 2024",
+        "yearStart": 2024, 
+        "yearEnd": null,
+        "type": "education",
+        "description": "", 
+        "image1": "",
+        "image2": "",
+        "image3": "",
+        "image4": "" 
+    }
+]
