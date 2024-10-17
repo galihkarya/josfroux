@@ -6,6 +6,7 @@
   --background: #f8fcfb;
   --foreground: #222423;
   --bgcontainer: #f8fcfb88;
+  --bgcontainerspecial: #F9FCFC;
   --bgnav: #f8fcfbaa;
   --subtitlel: #222423;
   --subtitler: #222423;
@@ -16,6 +17,7 @@
     --background: #222423;
     --foreground: #f8fcfb;
     --bgcontainer: #3f414144;
+    --bgcontainerspecial: #333434;
     --bgnav: #232424ba;
     --subtitlel: #64EDAE;
     --subtitler: #088395;
@@ -33,3 +35,14 @@ body {
   background: var(--background);
   transition: background-color 0.3s, color 0.3s;
 }
+
+/* Hide scrollbar for modern browsers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;     /* Firefox */
+}
+
