@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Manrope } from 'next/font/google';
+import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 const manrope = Manrope({
-  subsets: ['latin'],
-  weight: ['400', '700'], 
-  style: ['normal'],
-  display: 'swap', 
-})
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+});
 
 export const metadata: Metadata = {
   title: "Jos' Froux",
@@ -21,9 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={manrope.className}>
-        {children}
-      </body>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=award_star"
+        />
+      </head>
+      <body className={manrope.className}>{children}</body>
     </html>
   );
 }
