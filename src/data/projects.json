@@ -1,0 +1,42 @@
+[
+    {
+        "id": 0,
+        "title": "KuyStudy",
+        "description": "KuyStudy is a concept application for the learning-with-teacher booking system. - GEMASTIK XIV ",
+        "coverImage": "/assets/projects/kuystudy-cover-image.jpg",
+        "image1": "",
+        "image2": "",
+        "image3": "",
+        "github": ""
+    },
+    {
+        "id": 1,
+        "title": "E-Commerce",
+        "description": "E-Commerce is a concept of marketplace with a simple-clean design. - class assignment",
+        "coverImage": "/assets/projects/ecommerce-cover-image.jpg",
+        "image1": "",
+        "image2": "",
+        "image3": "",
+        "github": ""
+    },
+    {
+        "id": 2,
+        "title": "PawMatch",
+        "description": "PawMatch is an platform in a form of Android application for users that have pet and want to match their pets. - final class assignment",
+        "coverImage": "/assets/projects/pawmatch-cover-image.jpg",
+        "image1": "",
+        "image2": "",
+        "image3": "",
+        "github": ""
+    },
+    {
+        "id": 3,
+        "title": "Persona",
+        "description": "Persona is an Android application that brings personality identification system. - final college assignment",
+        "coverImage": "/assets/projects/persona-cover-image.jpg",
+        "image1": "",
+        "image2": "",
+        "image3": "",
+        "github": "https://github.com/galihkarya/Persona_v0.0.3"
+    }
+]
