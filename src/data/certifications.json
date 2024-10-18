@@ -1,0 +1,86 @@
+[
+    {
+        "id": 0, 
+        "name": "Belajar Dasar Pemrograman JavaScript",
+        "organization": "Dicoding Indonesia",
+        "descriptionTitle": "Menguasai dasar JavaScript untuk pengembangan aplikasi web menggunakan Node.Js.",
+        "descriptions": [
+            "Pengenalan JavaScript : Pengenalan tentang apa itu JavaScript, bagaimana sejarahnya, dan beberapa alasan untuk mulai mempelajarinya.",
+            "JavaScript Fundamentals : Menjelaskan dasar logika dan sintaksis pemrograman menggunakan JavaScript, seperti variabel, tipe data, dan perulangan.",
+            "Data Structure : Menjelaskan bagaimana menyimpan dan mengelola data yang lebih kompleks menggunakan Object, Array, Map, dan Set.",
+            "Function : Menjelaskan bagaimana mengelompokkan kode menjadi fungsi yang dapat dipanggil ulang.", 
+            "Object-Oriented Programming : Menjelaskan konsep OOP pada JavaScript, bagaimana membuat class, properti, dan method dari class.", 
+            "Functional Programming : Memahami konsep functional programming seperti perilaku fungsi, lambda, dan higher-order.", 
+            "Setup Environment : Proses instalasi lingkungan pengembangan seperti Node.js dan IDE pada perangkat yang Anda miliki.", 
+            "Module : Menjelaskan bagaimana beberapa berkas JavaScript dapat saling berkomunikasi dan berbagi data satu sama lain.", 
+            "Error Handling : Menjelaskan bagaimana menangani kegagalan yang mungkin muncul dalam program sehingga tidak berdampak kepada pengguna.", 
+            "Concurrency : Menjelaskan bagaimana menangani dan membuat proses asynchronous pada JavaScript.", 
+            "Node Package Manager : Mengenalkan beberapa library yang penting untuk ditambahkan ke dalam proyek aplikasi JavaScript.", 
+            "JavaScript Testing : Menjelaskan bagaimana melakukan pengujian otomatis pada kode JavaScript."
+        ],
+        "url": "https://www.dicoding.com/certificates/JLX14L2RJX72", 
+        "pinIndex": 3, 
+        "imgsrc": "/assets/certifications/js-dasar.png"
+    },
+    {
+        "id": 1, 
+        "name": "Belajar Dasar Pemrograman Web",
+        "organization": "Dicoding Indonesia",
+        "descriptionTitle": "Membuat halaman website menggunakan teknik semantic HTML dan layouting",
+        "descriptions": [
+            "Pengenalan HTML: Mempelajari alat yang digunakan dalam membangun struktur halaman website. Modul ini membahas tentang HTML, struktur dasar dokumen HTML, dsb.",
+            "Pendalaman HTML: Mendalami penerapan HTML dalam membangun struktur halaman web secara lebih lanjut. Di antaranya seperti beragam elemen HTML, teknik mengorganisir konten website dengan elemen semantik, mengenal attribute pada elemen, generic element, table, dsb. Selain itu, modul ini membahas tentang perbedaan antara elemen yang bersifat inline dan block.",
+            "Pengenalan CSS: Mempelajari alat yang digunakan untuk memperindah tampilan halaman website. Modul ini membahas mengenai peranan CSS, cara kerjanya, cara menuliskan kodenya, anatomi dari CSS rule, dsb.",
+            "Pendalaman CSS: Mendalami penerapan CSS dalam mempercantik tampilan halaman website secara lebih lanjut. Di antaranya seperti variatif selector, styling untuk font dan text, memahami tentang foreground color dan background color, box model, shadow, positioning, layouting menggunakan float, dan media query.", 
+            "Layout Responsif dengan Flexbox: Mempelajari teknik layouting menggunakan Flexbox dalam membangun konten halaman website. Fitur ini merupakan teknik baru di CSS dalam menyusun layout yang responsif dan dapat dikombinasikan dengan media query sehingga tampilan pada perangkat mobile lebih optimal."
+        ],
+        "url": "https://www.dicoding.com/certificates/53XEQWQ5RXRN", 
+        "pinIndex": 2, 
+        "imgsrc": "/assets/certifications/pemrograman-web-dasar.png"
+    },
+    {
+        "id": 2, 
+        "name": "Belajar Membuat Front-End Web untuk Pemula",
+        "organization": "Dicoding Indonesia",
+        "descriptionTitle": "Membuat aplikasi front-end web yang interaktif serta memiliki fitur penyimpanan menggunakan web storage.",
+        "descriptions": [
+            "Browser Object Model dan Document Object Model: Mempelajari penerapan BOM dan DOM pada halaman website. Selain itu, modul ini mengajarkan teknik pemanipulasian DOM menggunakan JavaScript.",
+            "Interaktif dengan Event: Mempelajari penerapan event dalam menciptakan interaktifitas pada HTML element. ",
+            "Penyimpanan Data dengan Web Storage: Mempelajari API browser yang berguna untuk penyimpanan data melalui Web Storage. Dalam modul ini mengajarkan mengenai tipe-tipe storage beserta penerapannya."
+        ],
+        "url": "https://www.dicoding.com/certificates/N9ZOY45WYPG5", 
+        "pinIndex": 1, 
+        "imgsrc": "/assets/certifications/frontend-pemula.png"
+    },
+    {
+        "id": 3, 
+        "name": "Belajar Membuat Aplikasi Web dengan React",
+        "organization": "Dicoding Indonesia",
+        "descriptionTitle": "Membuat aplikasi web dengan React yang memanfaatkan functional component, stateful component, dan controlled component.",
+        "descriptions": [
+            "Pengenalan React : Berkenalan dengan React, mengetahui alasan mempelajari React, dan mengenal ekosistem yang ada di React.",
+            "Konsep Dasar React : Belajar tentang konsep dasar React seperti composition, declarative code, unidirectional data flow, dan menyadari bahwa React hanyalah JavaScript.",
+            "React UI Component : Belajar tentang membangun UI di React seperti mengenal element dan component. Serta, belajar juga konsep component properti yang membuat UI aplikasi bersifat reusable.",
+            "Stateful Component : Belajar tentang class component, menggunakan state di dalam component, memahami dan mempraktikkan controlled component."
+        ],
+        "url": "https://www.dicoding.com/certificates/QLZ9V2R67X5D", 
+        "pinIndex": 0, 
+        "imgsrc": "/assets/certifications/react.png"
+    },
+    {
+        "id": 4, 
+        "name": "Belajar Dasar AI",
+        "organization": "Dicoding Indonesia",
+        "descriptionTitle": "Menelaah berbagai konsep dasar dalam AI beserta penerapannya.",
+        "descriptions": [
+            "Berkenalan dengan Artificial Intelligence (AI): Mengidentifikasi konsep dasar tentang AI.",
+            "Data untuk AI: Memaparkan konsep dasar tentang data serta pemanfaatannya dalam pengembangan AI.",
+            "Pengantar Machine Learning: Menjelaskan konsep dasar Machine Learning sebagai bagian dari AI beserta contoh penerapannya.",
+            "Deep Learning Untuk Semua Orang: Mengidentifikasi konsep penting dalam Deep Learning beserta mengimplementasikan contoh penerapannya."
+        ],
+        "url": "https://www.dicoding.com/certificates/JLX14L2RJX72", 
+        "pinIndex": null, 
+        "imgsrc": "/assets/certifications/ai-dasar.png"
+    }
+    
+]
