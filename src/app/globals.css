@@ -6,8 +6,9 @@
   --background: #f8fcfb;
   --foreground: #222423;
   --bgcontainer: #f8fcfb88;
-  --bgcontainerspecial: #F9FCFC;
-  --bgnav: #f8fcfbaa;
+  --bgspecial: #EFF8F5;
+  --bgcontainerspecial: #F3F7F4;
+  --bgnav: #f8fcfbc0;
   --subtitlel: #222423;
   --subtitler: #222423;
 }
@@ -17,7 +18,8 @@
     --background: #222423;
     --foreground: #f8fcfb;
     --bgcontainer: #3f414144;
-    --bgcontainerspecial: #333434;
+    --bgspecial: #2B312F;
+    --bgcontainerspecial: #2B312F;
     --bgnav: #232424ba;
     --subtitlel: #64EDAE;
     --subtitler: #088395;
@@ -34,6 +36,10 @@ body {
   color: var(--foreground);
   background: var(--background);
   transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Hide scrollbar for modern browsers */
