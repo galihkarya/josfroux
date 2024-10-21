@@ -1,19 +1,27 @@
-import ThemeSwitcher from "@/components/themeSwitcher";
+// import ThemeSwitcher from "@/components/themeSwitcher";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 
-import { MdMoreVert } from "react-icons/md";
-import { MdOutlineFileDownload } from "react-icons/md";
-import { MdArrowForward } from "react-icons/md";
-import { MdSchool } from "react-icons/md";
+import {
+  MdMoreVert,
+  MdOutlineFileDownload,
+  MdSchool,
+  MdMail,
+} from "react-icons/md";
+// import { MdArrowForward } from "react-icons/md";
 import { GoDotFill } from "react-icons/go";
+import { BiLogoInstagramAlt } from "react-icons/bi";
+import { RiLinkedinFill } from "react-icons/ri";
 
 import projectsData from "@/data/projects.json";
 import ProjectCard from "@/components/projectCard";
 
 import experienceData from "@/data/experienceandeducation.json";
 import ExperienceCard from "@/components/experiencesCard";
+
+import certificateData from "@/data/certifications.json";
+import CertificateCard from "@/components/certificateCard";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -23,23 +31,25 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export default function Home() {
   return (
-    <div className="main-container relative">
-      <div className="gradient-component-container h-auto w-min overflow-hidden ">
+    <div className="main-container relative h-full">
+      <NavBar />
+
+      <div className="gradient-component-container absolute h-[50vh] bottom-96 inset-0 -translate-y-1/3 -z-50 ">
         <Image
           src={"/assets/gradient-component.png"}
-          className="absolute -z-50 -top-28 left-1/2 transform -translate-x-1/2 "
-          width={1502}
-          height={1182}
+          layout="fill"
+          objectFit="cover"
           alt="gradient-component-1"
         />
       </div>
-      <NavBar />
-      <div className="content-container flex flex-col gap-16 w-screen bg-bgcontainer backdrop-blur-lg no-scrollbar overflow-auto">
+
+      <div className="content-container z-10 flex flex-col gap-6 w-screen bg-bgcontainer backdrop-blur-lg overflow-x-hidden">
         <Hero />
         <Skills />
         <Projects />
         <ExperiencenEducation />
         <Certifications />
+        <Contact />
       </div>
     </div>
   );
@@ -47,7 +57,7 @@ export default function Home() {
 
 const NavBar = () => {
   return (
-    <nav className="navbar-container sticky top-0 z-50 flex flex-row h-fit bg-bgnav justify-between items-center backdrop-blur-lg py-4 px-4">
+    <nav className="navbar-container sticky top-0 z-[1000] flex flex-row h-fit bg-bgnav justify-between border-b-[0.5px] border-bordercolor items-center backdrop-blur-md py-4 px-4">
       <h1
         className={`logo ${plusJakartaSans.className} font-bold text-xl text-foreground tracking-[0.1em]`}
       >
@@ -81,42 +91,42 @@ const Hero = () => {
       <div className="outer-photo-container ">
         <div className="relative">
           <Image
-            className="absolute -z-50 -top-16 left-0 transform translate-x-20"
+            className="absolute -z-10 -top-16 left-0 transform translate-x-20"
             src={"/assets/react-icon-glow.png"}
             height={100}
             width={100}
             alt="react-icon-glow"
           />
           <Image
-            className="absolute -z-50 top-12 -left-24 transform translate-x-1/2 -rotate-[65deg]"
+            className="absolute -z-10 top-12 -left-24 transform translate-x-1/2 -rotate-[65deg]"
             src={"/assets/html-icon-glow.png"}
             height={64}
             width={64}
             alt="html-icon-glow"
           />
           <Image
-            className="absolute -z-50 top-20 -right-24 transform -translate-x-1/2 rotate-[70deg]"
+            className="absolute -z-10 top-20 -right-24 transform -translate-x-1/2 rotate-[70deg]"
             src={"/assets/js-icon-glow.png"}
             height={64}
             width={64}
             alt="js-icon-glow"
           />
           <Image
-            className="absolute -z-50 top-56 -left-24 transform translate-x-1/2 -rotate-[110deg]"
+            className="absolute -z-10 top-56 -left-24 transform translate-x-1/2 -rotate-[110deg]"
             src={"/assets/css-icon-glow.png"}
             height={64}
             width={64}
             alt="css-icon-glow"
           />
           <Image
-            className="absolute -z-50 top-64 -right-24 transform -translate-x-1/2 rotate-[100deg]"
+            className="absolute -z-10 top-64 -right-24 transform -translate-x-1/2 rotate-[100deg]"
             src={"/assets/figma-icon-glow.png"}
             height={64}
             width={64}
             alt="figma-icon-glow"
           />
         </div>
-        <div className="photo-container bg-bgcontainer flex flex-col w-fit h-fit gap-2 shadow-lg rounded-lg border-[0.5px] border-bordercolor backdrop-blur-md p-2">
+        <div className="photo-container z-40 bg-bgcontainer flex flex-col w-fit h-fit gap-2 shadow-lg rounded-lg border-[0.5px] border-bordercolor backdrop-blur-md p-2">
           <div className="win-nav-container flex flex-row justify-between items-center px-1 py-1">
             <div className="button-nav-container flex flex-row gap-[0.35rem]">
               <div className="bg-[#FE5F57] h-[12px] w-[12px] rounded-full"></div>
@@ -177,7 +187,7 @@ const Hero = () => {
 
 const Skills = () => {
   return (
-    <div className="skill-container flex flex-col gap-10 p-8">
+    <div className="skill-container flex flex-col gap-10 p-6">
       <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
         WHAT I&apos;M GREAT AT
       </h1>
@@ -243,21 +253,21 @@ const Projects = () => {
   const sortedProjects = [...projectsData].sort((a, b) => b.id - a.id);
 
   return (
-    <div className="recent-project-container">
+    <div className="recent-project-container py-6">
       <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
         RECENT PROJECTS
       </h1>
-      <div className="projects-container flex flex-row gap-6 p-9 overflow-x-scroll scrollbar-hide">
+      <div className="projects-container flex flex-row gap-6 p-9 overflow-x-scroll ">
         {sortedProjects.map((project) => (
           <ProjectCard key={project.id} {...project} />
         ))}
-        <Link
+        {/* <Link                   // design the page for more projects first
           href={"#"}
           className="more flex flex-col gap-6 min-w-32 bg-bgcontainer rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-lg shadow-lg justify-center items-center"
         >
           <MdArrowForward size={24} />
           <p className="text-base font-light">more</p>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
@@ -273,7 +283,7 @@ const ExperiencenEducation = () => {
   );
 
   return (
-    <div className="experienceneducation-container flex flex-col gap-8">
+    <div className="experienceneducation-container bg-bgspecial flex flex-col gap-8 py-6">
       <div className="experiences-container">
         <div className="subtitle-container flex flex-row gap-3 items-center justify-center">
           <span className="material-symbols-outlined text-subtitlel">
@@ -307,9 +317,62 @@ const ExperiencenEducation = () => {
 };
 
 const Certifications = () => {
-  return(
-    <div>
-      <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">CERTIFICATIONS</h1>
+  const fileteredCertificates = certificateData.filter(
+    (certificateData) => certificateData.pinIndex !== null
+  );
+
+  return (
+    <div className="certifications-container flex flex-col py-6">
+      <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
+        CERTIFICATIONS
+      </h1>
+      <div className="certifications-list-container flex flex-row gap-4 p-8 overflow-x-scroll">
+        {fileteredCertificates
+          .sort((a, b) => a.pinIndex - b.pinIndex)
+          .map((certificate) => (
+            <CertificateCard key={certificate.pinIndex} {...certificate} />
+          ))}
+        {/* <Link // design the page for more certificate first
+          href={"#"}
+          className="more flex flex-col gap-6 min-w-32 bg-bgcontainer rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-lg shadow-lg justify-center items-center"
+        >
+          <MdArrowForward size={24} />
+          <p className="text-base font-light">more</p>
+        </Link> */}
+      </div>
     </div>
-  )
-}
+  );
+};
+
+const Contact = () => {
+  return (
+    <div className="contact-container">
+      <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
+        WAYS TO FIND ME
+      </h1>
+      <div className="social-media-container flex flex-row py-8 px-28 justify-between items-center">
+        <Link
+          href={"https://www.instagram.com/galihkarya_g"}
+          className="instagram-container flex flex-row gap-3"
+        >
+          <BiLogoInstagramAlt size={28} />
+          <p className="hidden">@galihkarya_g</p>
+        </Link>
+        <Link
+          href={"https://www.linkedin.com/in/galihkarya"}
+          className="linkedin-container flex flex-row gap-3"
+        >
+          <RiLinkedinFill size={28} />
+          <p className="hidden">galihkarya</p>
+        </Link>
+        <Link
+          href={"mailto:galihkaryagemilang2001@gmail.com"}
+          className="email-container flex flex-row gap-3"
+        >
+          <MdMail size={28} />
+          <p className="hidden">galihkaryagemilang2001@gmail.com</p>
+        </Link>
+      </div>
+    </div>
+  );
+};
