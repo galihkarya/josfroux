@@ -24,6 +24,7 @@ const config: Config = {
         gradientl1: "#64EDAE",
         gradientr1: "#088395",
         bgcontainer: "var(--bgcontainer)", 
+        bgspecial: "var(--bgspecial)",
         bgcontainerspecial: "var(--bgcontainerspecial)", 
         bordercolor: "#97979777" ,
       },
