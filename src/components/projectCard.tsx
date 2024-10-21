@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa6";
@@ -16,7 +15,7 @@ interface ProjectProps {
 
 const ProjectCard = (project: ProjectProps) => {
   return (
-    <div className="project-card flex flex-col min-w-80 bg-bgcontainer rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-lg shadow-lg">
+    <div className=" project-card flex flex-col min-w-80 bg-bgcontainer rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-lg shadow-lg">
       <Image
         className="flex min-h-1/2 rounded-t-2xl "
         src={project.coverImage}
