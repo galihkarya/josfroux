@@ -28,7 +28,12 @@ const ProjectCard = (project: ProjectProps) => {
         <h3 className="font-medium text-lg">{project.title}</h3>
         <p>{project.description}</p>
         {project.github && (
-          <Link className=" w-fit" href={project.github} target="_blank" rel="noreferrer">
+          <Link
+            className=" w-fit"
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaGithub className="opacity-70" size={24} />
           </Link>
         )}
