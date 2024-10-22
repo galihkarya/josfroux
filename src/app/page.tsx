@@ -1,3 +1,5 @@
+"use client";
+
 // import ThemeSwitcher from "@/components/themeSwitcher";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Image from "next/image";
@@ -8,6 +10,7 @@ import {
   MdOutlineFileDownload,
   MdSchool,
   MdMail,
+  MdClose,
 } from "react-icons/md";
 // import { MdArrowForward } from "react-icons/md";
 import { GoDotFill } from "react-icons/go";
@@ -22,6 +25,10 @@ import ExperienceCard from "@/components/experiencesCard";
 
 import certificateData from "@/data/certifications.json";
 import CertificateCard from "@/components/certificateCard";
+
+import { useState } from "react";
+
+import { motion, AnimatePresence } from "framer-motion";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -50,12 +57,55 @@ export default function Home() {
         <ExperiencenEducation />
         <Certifications />
         <Contact />
+        <Footer />
       </div>
     </div>
   );
 }
 
 const NavBar = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
+  const MoreModal = () => {
+    return (
+      <motion.div
+        className="absolute top-2 right-2 z-[60] flex flex-col bg-bgcontainer rounded-xl border-[0.5px] border-bordercolor backdrop-blur-lg px-3 pb-3 pt-8"
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.95, opacity: 0 }}
+        transition={{ duration: 0.1 }}
+        style={{ transformOrigin: "top right" }}
+      >
+        <button onClick={toggleModal}>
+          <MdClose className="absolute top-3 right-3" size={24} />
+        </button>
+        <div className="flex flex-col gap-7 font-semibold text-base text-nowrap p-4">
+          <a href="#hero" onClick={toggleModal}>
+            Home
+          </a>
+          <a href="#skill" onClick={toggleModal}>
+            Skills
+          </a>
+          <a href="#project" onClick={toggleModal}>
+            Projects
+          </a>
+          <a href="#experience" onClick={toggleModal}>
+            Experiences
+          </a>
+          <a href="#certification" onClick={toggleModal}>
+            Certifications
+          </a>
+          <a href="#contact" onClick={toggleModal}>
+            Social Media
+          </a>
+        </div>
+      </motion.div>
+    );
+  };
+
   return (
     <nav className="navbar-container sticky top-0 z-[1000] flex flex-row h-fit bg-bgnav justify-between border-b-[0.5px] border-bordercolor items-center backdrop-blur-md py-4 px-4">
       <h1
@@ -63,7 +113,8 @@ const NavBar = () => {
       >
         &lt;gal/&gt;
       </h1>
-      <button>
+      <AnimatePresence>{isModalOpen && <MoreModal />}</AnimatePresence>
+      <button onClick={toggleModal}>
         <MdMoreVert size={24} />
       </button>
     </nav>
@@ -72,11 +123,19 @@ const NavBar = () => {
 
 const Hero = () => {
   return (
-    <div className="hero-container flex flex-col gap-12 items-center pt-14 px-4">
+    <div
+      id="hero"
+      className="hero-container flex flex-col gap-12 items-center pt-14 px-4"
+    >
       <div className="greeting-container flex flex-col gap-6 pb-4">
-        <h1 className="text-5xl font-extrabold text-center bg-gradient-to-r from-gradientl1 to-gradientr1 bg-clip-text text-transparent">
+        <motion.h1
+          className="text-5xl font-extrabold text-center bg-gradient-to-r from-gradientl1 to-gradientr1 bg-clip-text text-transparent"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 2 }}
+        >
           Hello!
-        </h1>
+        </motion.h1>
         <div className="flex flex-row items-center gap-4">
           <h2 className="text-2xl font-bold opacity-70">I am</h2>
           <div>
@@ -89,44 +148,49 @@ const Hero = () => {
         </div>
       </div>
       <div className="outer-photo-container ">
-        <div className="relative">
+        <motion.div
+          className="relative"
+          initial={{ scale: 0, y: 100 }}
+          animate={{ scale: 1, y: 0 }}
+          transition={{ ease: "circInOut", delay: 1, duration: 0.6 }}
+        >
           <Image
-            className="absolute -z-10 -top-16 left-0 transform translate-x-20"
+            className="absolute -z-10 -top-16 left-0 transform translate-x-20 hover:-translate-y-2 duration-200"
             src={"/assets/react-icon-glow.png"}
             height={100}
             width={100}
             alt="react-icon-glow"
           />
           <Image
-            className="absolute -z-10 top-12 -left-24 transform translate-x-1/2 -rotate-[65deg]"
+            className="absolute -z-10 top-12 -left-24 transform translate-x-1/2 -rotate-[65deg] hover:-translate-y-2 duration-200"
             src={"/assets/html-icon-glow.png"}
             height={64}
             width={64}
             alt="html-icon-glow"
           />
           <Image
-            className="absolute -z-10 top-20 -right-24 transform -translate-x-1/2 rotate-[70deg]"
+            className="absolute -z-10 top-20 -right-24 transform -translate-x-1/2 rotate-[70deg] hover:-translate-y-2 duration-200"
             src={"/assets/js-icon-glow.png"}
             height={64}
             width={64}
             alt="js-icon-glow"
           />
           <Image
-            className="absolute -z-10 top-56 -left-24 transform translate-x-1/2 -rotate-[110deg]"
+            className="absolute -z-10 top-56 -left-24 transform translate-x-1/2 -rotate-[110deg] hover:-translate-y-2 duration-200"
             src={"/assets/css-icon-glow.png"}
             height={64}
             width={64}
             alt="css-icon-glow"
           />
           <Image
-            className="absolute -z-10 top-64 -right-24 transform -translate-x-1/2 rotate-[100deg]"
+            className="absolute -z-10 top-64 -right-24 transform -translate-x-1/2 rotate-[100deg] hover:-translate-y-2 duration-200"
             src={"/assets/figma-icon-glow.png"}
             height={64}
             width={64}
             alt="figma-icon-glow"
           />
-        </div>
-        <div className="photo-container z-40 bg-bgcontainer flex flex-col w-fit h-fit gap-2 shadow-lg rounded-lg border-[0.5px] border-bordercolor backdrop-blur-md p-2">
+        </motion.div>
+        <div className="photo-container z-40 bg-bgcontainer flex flex-col w-fit h-fit gap-2 shadow-lg rounded-lg border-[0.5px] border-bordercolor backdrop-blur-md p-2 hover:skew-x-3 hover:rotate-3 duration-200">
           <div className="win-nav-container flex flex-row justify-between items-center px-1 py-1">
             <div className="button-nav-container flex flex-row gap-[0.35rem]">
               <div className="bg-[#FE5F57] h-[12px] w-[12px] rounded-full"></div>
@@ -154,7 +218,11 @@ const Hero = () => {
         <p>logical</p>
       </div>
       <div className="social-media-container flex flex-row gap-3 items-center">
-        <Link href="https://www.linkedin.com/in/galihkarya">
+        <Link
+          href="https://www.linkedin.com/in/galihkarya"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
             src={"/assets/linkedin-icon-glow.png"}
             width={40}
@@ -162,7 +230,11 @@ const Hero = () => {
             alt="linkedin-icon-glow"
           />
         </Link>
-        <Link href="https://www.instagram.com/galihkarya_g">
+        <Link
+          href="https://www.instagram.com/galihkarya_g"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
             src={"/assets/instagram-icon-glow.png"}
             width={40}
@@ -174,6 +246,8 @@ const Hero = () => {
           href={
             "https://drive.google.com/file/d/14mwYWEnIEDxZL85oZAX0j0Dirl56nhbC/view?usp=sharing"
           }
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div className="cv-button-container flex flex-row gap-1 items-center px-3 py-1 rounded-full bg-gradient-to-r from-gradientl1 to-gradientr1 ">
             <MdOutlineFileDownload color="#f8fcfb" size={18} />
@@ -187,7 +261,7 @@ const Hero = () => {
 
 const Skills = () => {
   return (
-    <div className="skill-container flex flex-col gap-10 p-6">
+    <div id="skill" className="skill-container flex flex-col gap-10 p-6">
       <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
         WHAT I&apos;M GREAT AT
       </h1>
@@ -253,7 +327,7 @@ const Projects = () => {
   const sortedProjects = [...projectsData].sort((a, b) => b.id - a.id);
 
   return (
-    <div className="recent-project-container py-6">
+    <div id="project" className="recent-project-container py-6">
       <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
         RECENT PROJECTS
       </h1>
@@ -283,7 +357,10 @@ const ExperiencenEducation = () => {
   );
 
   return (
-    <div className="experienceneducation-container bg-bgspecial flex flex-col gap-8 py-6">
+    <div
+      id="experience"
+      className="experienceneducation-container bg-bgspecial flex flex-col gap-8 py-6"
+    >
       <div className="experiences-container">
         <div className="subtitle-container flex flex-row gap-3 items-center justify-center">
           <span className="material-symbols-outlined text-subtitlel">
@@ -322,7 +399,10 @@ const Certifications = () => {
   );
 
   return (
-    <div className="certifications-container flex flex-col py-6">
+    <div
+      id="certification"
+      className="certifications-container flex flex-col py-6"
+    >
       <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
         CERTIFICATIONS
       </h1>
@@ -346,7 +426,7 @@ const Certifications = () => {
 
 const Contact = () => {
   return (
-    <div className="contact-container">
+    <div id="contact" className="contact-container">
       <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
         WAYS TO FIND ME
       </h1>
@@ -354,6 +434,8 @@ const Contact = () => {
         <Link
           href={"https://www.instagram.com/galihkarya_g"}
           className="instagram-container flex flex-row gap-3"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <BiLogoInstagramAlt size={28} />
           <p className="hidden">@galihkarya_g</p>
@@ -361,6 +443,8 @@ const Contact = () => {
         <Link
           href={"https://www.linkedin.com/in/galihkarya"}
           className="linkedin-container flex flex-row gap-3"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <RiLinkedinFill size={28} />
           <p className="hidden">galihkarya</p>
@@ -373,6 +457,58 @@ const Contact = () => {
           <p className="hidden">galihkaryagemilang2001@gmail.com</p>
         </Link>
       </div>
+    </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <div className="footer-container bg-[#222227] flex flex-col p-8 gap-3">
+      <p className="font-normal text-sm text-center text-[#f8fcfb] opacity-50">
+        handcrafted from the ground with &#x1F499;{" "}
+      </p>
+      <div className="icons-container flex flex-row gap-6 justify-center">
+        <Image
+          src={"/assets/figma-icon.png"}
+          className="text-foreground"
+          width={16}
+          height={16}
+          alt="figma-icon"
+        />
+        <Image
+          src={"/assets/next-icon.png"}
+          width={16}
+          height={16}
+          alt="next-icon"
+        />
+        <Image
+          src={"/assets/html-icon.png"}
+          width={16}
+          height={16}
+          alt="html-icon"
+        />
+        <Image
+          src={"/assets/css-icon.png"}
+          width={16}
+          height={16}
+          alt="css-icon"
+        />
+        <Image
+          src={"/assets/js-icon.png"}
+          width={16}
+          height={16}
+          alt="js-icon"
+        />
+        <Image
+          src={"/assets/tailwindcss-icon.png"}
+          width={20}
+          height={16}
+          alt="tailwindcss-icon"
+        />
+      </div>
+      <p className="font-normal text-sm text-center text-[#f8fcfb] opacity-50">
+        2024
+      </p>
     </div>
   );
 };
