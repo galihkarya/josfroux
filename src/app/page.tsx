@@ -164,14 +164,14 @@ const Hero = () => {
           </div>
         </div>
         
-          <div className="my-character flex flex-row gap-2 items-center text-[#858585]">
+          <div className="my-character hidden lg:flex flex-row gap-2 items-center text-[#858585]">
             <p>adaptable</p>
             <GoDotFill size={8} />
             <p>curious</p>
             <GoDotFill size={8} />
             <p>logical</p>
           </div>
-          <div className="social-media-container flex flex-row gap-3 items-center">
+          <div className="social-media-container hidden lg:flex flex-row gap-3 items-center">
             <Link
               href="https://www.linkedin.com/in/galihkarya"
               target="_blank"
@@ -429,9 +429,9 @@ const ExperiencenEducation = () => {
   return (
     <div
       id="experience"
-      className="experienceneducation-container bg-bgspecial flex flex-col gap-8 py-6"
+      className="experienceneducation-container bg-bgspecial flex flex-col gap-8 py-6 lg:flex-row lg:gap-16 lg:px-12"
     >
-      <div className="experiences-container">
+      <div className="experiences-container flex flex-col lg:w-1/2">
         <div className="subtitle-container flex flex-row gap-3 items-center justify-center">
           <span className="material-symbols-outlined text-subtitlel">
             award_star
@@ -446,7 +446,7 @@ const ExperiencenEducation = () => {
           ))}
         </div>
       </div>
-      <div className="education-container">
+      <div className="education-containe flex flex-col lg:w-1/2">
         <div className="subtitle-container flex flex-row gap-3 items-center justify-center">
           <MdSchool className="text-subtitlel" size={24} />
           <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
