@@ -30,7 +30,7 @@ const CertificateCard = (certificate: CertificateProps) => {
           className="flex flex-row gap-2 w-fit items-center bg-bgcontainer border-[0.5px] border-bordercolor rounded-lg px-2 py-1 shadow-sm"
           href={certificate.url}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           <MdLink className="opacity-70" size={24} />
           <p className="font-base text-sm">View credential</p>
