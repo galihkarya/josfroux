@@ -72,11 +72,15 @@ const NavBar = () => {
   const MoreModal = () => {
     return (
       <motion.div
-        className="absolute top-2 right-2 z-[60] flex flex-col bg-bgcontainer rounded-xl border-[0.5px] border-bordercolor backdrop-blur-lg px-3 pb-3 pt-8"
+        className="absolute top-2 right-2 z-[60] flex flex-col bg-bgcontainer rounded-xl border-[0.5px] border-bordercolor backdrop-blur-lg px-3 pb-3 pt-8 lg:hidden"
         initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.95, opacity: 0 }}
-        transition={{ duration: 0.1 }}
+        transition={{
+          type: "spring",
+          stiffness: 200,
+          damping: 20,
+        }}
         style={{ transformOrigin: "top right" }}
       >
         <button onClick={toggleModal}>
@@ -107,16 +111,24 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="navbar-container sticky top-0 z-[1000] flex flex-row h-fit bg-bgnav justify-between border-b-[0.5px] border-bordercolor items-center backdrop-blur-md py-4 px-4">
+    <nav className="navbar-container sticky top-0 z-[1000] flex flex-row h-fit bg-bgnav justify-between border-b-[0.5px] border-bordercolor items-center backdrop-blur-md py-4 px-4 lg:px-8">
       <h1
         className={`logo ${plusJakartaSans.className} font-bold text-xl text-foreground tracking-[0.1em]`}
       >
         &lt;gal/&gt;
       </h1>
       <AnimatePresence>{isModalOpen && <MoreModal />}</AnimatePresence>
-      <button onClick={toggleModal}>
+      <button className="lg:hidden" onClick={toggleModal}>
         <MdMoreVert size={24} />
       </button>
+      <div className="hidden lg:flex flex-row gap-6 font-semibold text-sm ">
+        <a href="#hero">Home</a>
+        <a href="#skill">Skills</a>
+        <a href="#project">Projects</a>
+        <a href="#experience">Experiences</a>
+        <a href="#certification">Certifications</a>
+        <a href="#contact">Social Media</a>
+      </div>
     </nav>
   );
 };
@@ -125,14 +137,19 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="hero-container flex flex-col gap-12 items-center pt-14 px-4"
+      className="hero-container flex flex-col lg:flex-row lg:justify-between gap-12 items-center pt-14 px-4 lg:px-32 lg:pt-36 lg:pb-24"
     >
-      <div className="greeting-container flex flex-col gap-6 pb-4">
+      <div className="greeting-container flex flex-col gap-6 pb-4 lg:gap-16 ">
         <motion.h1
-          className="text-5xl font-extrabold text-center bg-gradient-to-r from-gradientl1 to-gradientr1 bg-clip-text text-transparent"
+          className="text-5xl font-extrabold text-center bg-gradient-to-r from-gradientl1 to-gradientr1 bg-clip-text text-transparent lg:text-8xl lg:text-left"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 2 }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 20,
+            duration: 2,
+          }}
         >
           Hello!
         </motion.h1>
@@ -146,23 +163,76 @@ const Hero = () => {
             <h2 className="text-xl font-bold opacity-30">Galih Karya</h2>
           </div>
         </div>
+        
+          <div className="my-character flex flex-row gap-2 items-center text-[#858585]">
+            <p>adaptable</p>
+            <GoDotFill size={8} />
+            <p>curious</p>
+            <GoDotFill size={8} />
+            <p>logical</p>
+          </div>
+          <div className="social-media-container flex flex-row gap-3 items-center">
+            <Link
+              href="https://www.linkedin.com/in/galihkarya"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={"/assets/linkedin-icon-glow.png"}
+                width={40}
+                height={40}
+                alt="linkedin-icon-glow"
+              />
+            </Link>
+            <Link
+              href="https://www.instagram.com/galihkarya_g"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={"/assets/instagram-icon-glow.png"}
+                width={40}
+                height={40}
+                alt="instagram-icon-glow"
+              />
+            </Link>
+            <Link
+              href={
+                "https://drive.google.com/file/d/14mwYWEnIEDxZL85oZAX0j0Dirl56nhbC/view?usp=sharing"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="cv-button-container flex flex-row gap-1 items-center px-3 py-1 rounded-full bg-gradient-to-r from-gradientl1 to-gradientr1 ">
+                <MdOutlineFileDownload color="#f8fcfb" size={18} />
+                <p className="font-semibold text-sm text-[#f8fcfb]">CV</p>
+              </div>
+            </Link>
+          </div>
+        
       </div>
       <div className="outer-photo-container ">
         <motion.div
           className="relative"
           initial={{ scale: 0, y: 100 }}
           animate={{ scale: 1, y: 0 }}
-          transition={{ ease: "circInOut", delay: 1, duration: 0.6 }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 20,
+            delay: 1,
+            duration: 0.6,
+          }}
         >
           <Image
-            className="absolute -z-10 -top-16 left-0 transform translate-x-20 hover:-translate-y-2 duration-200"
+            className="absolute -z-10 -top-16 left-0 transform translate-x-20 hover:-translate-y-2 duration-200 lg:translate-x-32"
             src={"/assets/react-icon-glow.png"}
             height={100}
             width={100}
             alt="react-icon-glow"
           />
           <Image
-            className="absolute -z-10 top-12 -left-24 transform translate-x-1/2 -rotate-[65deg] hover:-translate-y-2 duration-200"
+            className="absolute -z-10 top-12 -left-24 transform translate-x-1/2 -rotate-[65deg] hover:-translate-y-2 duration-200 lg:top-16"
             src={"/assets/html-icon-glow.png"}
             height={64}
             width={64}
@@ -176,21 +246,21 @@ const Hero = () => {
             alt="js-icon-glow"
           />
           <Image
-            className="absolute -z-10 top-56 -left-24 transform translate-x-1/2 -rotate-[110deg] hover:-translate-y-2 duration-200"
+            className="absolute -z-10 top-56 -left-24 transform translate-x-1/2 -rotate-[110deg] hover:-translate-y-2 duration-200 lg:top-80"
             src={"/assets/css-icon-glow.png"}
             height={64}
             width={64}
             alt="css-icon-glow"
           />
           <Image
-            className="absolute -z-10 top-64 -right-24 transform -translate-x-1/2 rotate-[100deg] hover:-translate-y-2 duration-200"
+            className="absolute -z-10 top-64 -right-24 transform -translate-x-1/2 rotate-[100deg] hover:-translate-y-2 duration-200 lg:top-72"
             src={"/assets/figma-icon-glow.png"}
             height={64}
             width={64}
             alt="figma-icon-glow"
           />
         </motion.div>
-        <div className="photo-container z-40 bg-bgcontainer flex flex-col w-fit h-fit gap-2 shadow-lg rounded-lg border-[0.5px] border-bordercolor backdrop-blur-md p-2 hover:skew-x-3 hover:rotate-3 duration-200">
+        <div className="photo-container z-40 bg-bgcontainer flex flex-col w-fit h-fit gap-2 shadow-lg rounded-lg border-[0.5px] border-bordercolor backdrop-blur-md p-2 duration-200">
           <div className="win-nav-container flex flex-row justify-between items-center px-1 py-1">
             <div className="button-nav-container flex flex-row gap-[0.35rem]">
               <div className="bg-[#FE5F57] h-[12px] w-[12px] rounded-full"></div>
@@ -203,21 +273,21 @@ const Hero = () => {
           </div>
           <Image
             src={"/assets/graduation-photo.png"}
-            className="w-60 h-auto rounded-xl"
+            className="w-60 h-auto rounded-xl lg:w-80"
             height={1296}
             width={971}
             alt="graduation-photo"
           />
         </div>
       </div>
-      <div className="my-character flex flex-row gap-2 items-center text-[#858585]">
+      <div className="my-character flex flex-row gap-2 items-center text-[#858585] lg:hidden">
         <p>adaptable</p>
         <GoDotFill size={8} />
         <p>curious</p>
         <GoDotFill size={8} />
         <p>logical</p>
       </div>
-      <div className="social-media-container flex flex-row gap-3 items-center">
+      <div className="social-media-container flex flex-row gap-3 items-center lg:hidden">
         <Link
           href="https://www.linkedin.com/in/galihkarya"
           target="_blank"
