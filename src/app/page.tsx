@@ -41,7 +41,7 @@ export default function Home() {
     <div className="main-container relative h-full">
       <NavBar />
 
-      <div className="gradient-component-container absolute h-[50vh] bottom-96 inset-0 -translate-y-1/3 -z-50 ">
+      <div className="gradient-component-container absolute h-[40vh] bottom-96 inset-0 -translate-y-1/3 -z-50 ">
         <Image
           src={"/assets/gradient-component.png"}
           layout="fill"
