@@ -38,26 +38,28 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export default function Home() {
   return (
-    <div className="main-container relative h-full no-scrollbar">
-      <NavBar />
+    <div className="gradient-component-container flex w-screen relative">
+      <Image
+        src={"/assets/gradient-component.png"}
+        className="absolute object-cover -z-50 top-0 -translate-y-28 inset-0 h-auto w-screen min-w-72 max-w-5xl lg:-translate-y-64 lg:translate-x-24"
+        // objectFit="cover"
+        width={1502}
+        height={2000}
+        alt="gradient-component-1"
+      />
 
-      <div className="gradient-component-container absolute h-[40vh] bottom-96 inset-0 -translate-y-1/3 -z-50 ">
-        <Image
-          src={"/assets/gradient-component.png"}
-          layout="fill"
-          objectFit="cover"
-          alt="gradient-component-1"
-        />
-      </div>
+      <div className="main-container h-full no-scrollbar">
+        <NavBar />
 
-      <div className="content-container z-10 flex flex-col gap-6 w-screen bg-bgcontainer backdrop-blur-lg overflow-x-hidden">
-        <Hero />
-        <Skills />
-        <Projects />
-        <ExperiencenEducation />
-        <Certifications />
-        <Contact />
-        <Footer />
+        <div className="content-container z-10 flex flex-col gap-6 w-screen bg-bgcontainer backdrop-blur-lg overflow-x-hidden">
+          <Hero />
+          <Skills />
+          <Projects />
+          <ExperiencenEducation />
+          <Certifications />
+          <Contact />
+          <Footer />
+        </div>
       </div>
     </div>
   );
@@ -453,7 +455,7 @@ const Projects = () => {
   const sortedProjects = [...projectsData].sort((a, b) => b.id - a.id);
 
   return (
-    <div className="relative">
+    <div className="project-background-container relative">
       <Image
         className="hidden absolute -z-50 top-24 left-16 lg:flex"
         src={"/assets/tessaract.png"}
