@@ -24,10 +24,10 @@ const CertificateCard = (certificate: CertificateProps) => {
         alt={certificate.name}
       />
 
-      <div className="certificate-card-content flex flex-col gap-6 p-6">
+      <div className="certificate-card-content  flex flex-col gap-6 p-6">
         <h3 className="font-medium text-lg">{certificate.name}</h3>
         <Link
-          className="flex flex-row gap-2 w-fit items-center bg-bg-bgcontainersecondary border-[0.5px] border-bordercolor rounded-lg px-2 py-1 shadow-sm"
+          className=" flex flex-row gap-2 w-fit items-center bg-bg-bgcontainersecondary border-[0.5px] border-bordercolor rounded-lg px-2 py-1 shadow-sm"
           href={certificate.url}
           target="_blank"
           rel="noopener noreferrer"

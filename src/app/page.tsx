@@ -544,7 +544,7 @@ const Certifications = () => {
       <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
         CERTIFICATIONS
       </h1>
-      <div className="certifications-list-container no-scrollbar flex flex-row gap-4 p-8 overflow-x-scroll">
+      <div className="certifications-list-container no-scrollbar flex flex-row gap-4 p-8 overflow-x-scroll lg:grid lg:grid-cols-2 lg:px-48 lg:gap-10 lg:max-w-6xl lg:self-center">
         {fileteredCertificates
           .sort((a, b) => a.pinIndex - b.pinIndex)
           .map((certificate) => (
@@ -552,7 +552,7 @@ const Certifications = () => {
           ))}
         {/* <Link // design the page for more certificate first
           href={"#"}
-          className="more flex flex-col gap-6 min-w-32 bg-bgcontainer rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-lg shadow-lg justify-center items-center"
+          className="more flex flex-col gap-6 min-w-32 bg-bgcontainer rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-lg shadow-lg justify-center items-center lg:hidden"
         >
           <MdArrowForward size={24} />
           <p className="text-base font-light">more</p>
@@ -564,11 +564,11 @@ const Certifications = () => {
 
 const Contact = () => {
   return (
-    <div id="contact" className="contact-container">
+    <div id="contact" className="contact-container flex flex-col">
       <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
         WAYS TO FIND ME
       </h1>
-      <div className="social-media-container flex flex-row py-8 px-28 justify-between items-center">
+      <div className="social-media-container flex flex-row py-8 px-36 items-center justify-between md:px-8 lg:px-0 lg:gap-16 lg:max-w-7xl lg:self-center">
         <Link
           href={"https://www.instagram.com/galihkarya_g"}
           className="instagram-container flex flex-row gap-3"
@@ -576,7 +576,7 @@ const Contact = () => {
           rel="noopener noreferrer"
         >
           <BiLogoInstagramAlt size={28} />
-          <p className="hidden">@galihkarya_g</p>
+          <p className="hidden md:block">@galihkarya_g</p>
         </Link>
         <Link
           href={"https://www.linkedin.com/in/galihkarya"}
@@ -585,14 +585,14 @@ const Contact = () => {
           rel="noopener noreferrer"
         >
           <RiLinkedinFill size={28} />
-          <p className="hidden">galihkarya</p>
+          <p className="hidden md:block">galihkarya</p>
         </Link>
         <Link
           href={"mailto:galihkaryagemilang2001@gmail.com"}
           className="email-container flex flex-row gap-3"
         >
           <MdMail size={28} />
-          <p className="hidden">galihkaryagemilang2001@gmail.com</p>
+          <p className="hidden md:block">galihkaryagemilang2001@gmail.com</p>
         </Link>
       </div>
     </div>
