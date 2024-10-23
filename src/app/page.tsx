@@ -163,53 +163,52 @@ const Hero = () => {
             <h2 className="text-xl font-bold opacity-30">Galih Karya</h2>
           </div>
         </div>
-        
-          <div className="my-character hidden lg:flex flex-row gap-2 items-center text-[#858585]">
-            <p>adaptable</p>
-            <GoDotFill size={8} />
-            <p>curious</p>
-            <GoDotFill size={8} />
-            <p>logical</p>
-          </div>
-          <div className="social-media-container hidden lg:flex flex-row gap-3 items-center">
-            <Link
-              href="https://www.linkedin.com/in/galihkarya"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={"/assets/linkedin-icon-glow.png"}
-                width={40}
-                height={40}
-                alt="linkedin-icon-glow"
-              />
-            </Link>
-            <Link
-              href="https://www.instagram.com/galihkarya_g"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={"/assets/instagram-icon-glow.png"}
-                width={40}
-                height={40}
-                alt="instagram-icon-glow"
-              />
-            </Link>
-            <Link
-              href={
-                "https://drive.google.com/file/d/14mwYWEnIEDxZL85oZAX0j0Dirl56nhbC/view?usp=sharing"
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="cv-button-container flex flex-row gap-1 items-center px-3 py-1 rounded-full bg-gradient-to-r from-gradientl1 to-gradientr1 ">
-                <MdOutlineFileDownload color="#f8fcfb" size={18} />
-                <p className="font-semibold text-sm text-[#f8fcfb]">CV</p>
-              </div>
-            </Link>
-          </div>
-        
+
+        <div className="my-character hidden lg:flex flex-row gap-2 items-center text-[#858585]">
+          <p>adaptable</p>
+          <GoDotFill size={8} />
+          <p>curious</p>
+          <GoDotFill size={8} />
+          <p>logical</p>
+        </div>
+        <div className="social-media-container hidden lg:flex flex-row gap-3 items-center">
+          <Link
+            href="https://www.linkedin.com/in/galihkarya"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={"/assets/linkedin-icon-glow.png"}
+              width={40}
+              height={40}
+              alt="linkedin-icon-glow"
+            />
+          </Link>
+          <Link
+            href="https://www.instagram.com/galihkarya_g"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={"/assets/instagram-icon-glow.png"}
+              width={40}
+              height={40}
+              alt="instagram-icon-glow"
+            />
+          </Link>
+          <Link
+            href={
+              "https://drive.google.com/file/d/14mwYWEnIEDxZL85oZAX0j0Dirl56nhbC/view?usp=sharing"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="cv-button-container flex flex-row gap-1 items-center px-3 py-1 rounded-full bg-gradient-to-r from-gradientl1 to-gradientr1 ">
+              <MdOutlineFileDownload color="#f8fcfb" size={18} />
+              <p className="font-semibold text-sm text-[#f8fcfb]">CV</p>
+            </div>
+          </Link>
+        </div>
       </div>
       <div className="outer-photo-container ">
         <motion.div
@@ -335,58 +334,115 @@ const Skills = () => {
       <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
         WHAT I&apos;M GREAT AT
       </h1>
-      <div className="skills flex flex-col gap-6 bg-bgcontainer border-[0.5px] border-bordercolor rounded-2xl shadow-lg p-8">
-        <div className="skill flex flex-row items-center gap-4">
+      <div className="skills flex flex-col gap-6 bg-bgcontainer border-[0.5px] border-bordercolor rounded-2xl shadow-lg p-8 lg:flex-row lg:border-0 lg:shadow-none lg:bg-none lg:justify-between lg:px-20">
+        <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainer lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
           <Image
-            className="w-8 h-8"
+            className="w-8 h-8 lg:hidden"
             src={"/assets/react-framed-icon.png"}
             width={128}
             height={128}
             alt="react-framed-icon"
           />
-          <p className="text-base text-foreground font-normal">
+          <p className="text-base text-foreground font-normal lg:hidden">
             React.js/Vite.js/Next.js/React Native
           </p>
-        </div>
-        <div className="skill flex flex-row items-center gap-4">
+
           <Image
-            className="w-8 h-8"
+            className="hidden w-24 h-24 lg:flex"
+            src={"/assets/reacts.png"}
+            width={128}
+            height={128}
+            alt="reacts-icon"
+          />
+          <p className="hidden text-base text-foreground font-normal lg:flex">
+            React
+          </p>
+        </div>
+        <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainer lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
+          <Image
+            className="w-8 h-8 lg:hidden"
             src={"/assets/html-framed-icon.png"}
             width={128}
             height={128}
             alt="html-framed-icon"
           />
-          <p className="text-base text-foreground font-normal">HTML</p>
-        </div>
-        <div className="skill flex flex-row items-center gap-4">
+          <p className="text-base text-foreground font-normal lg:hidden">
+            HTML
+          </p>
           <Image
-            className="w-8 h-8"
+            className="hidden w-24 h-24 lg:flex"
+            src={"/assets/html-icon.png"}
+            width={128}
+            height={128}
+            alt="html-icon"
+          />
+          <p className="hidden text-base text-foreground font-normal lg:flex">
+            HTML
+          </p>
+        </div>
+        <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainer lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
+          <Image
+            className="w-8 h-8 lg:hidden"
             src={"/assets/css-framed-icon.png"}
             width={128}
             height={128}
             alt="css-framed-icon"
           />
-          <p className="text-base text-foreground font-normal">CSS</p>
-        </div>
-        <div className="skill flex flex-row items-center gap-4">
+          <p className="text-base text-foreground font-normal lg:hidden">CSS</p>
           <Image
-            className="w-8 h-8"
+            className="hidden w-24 h-24 lg:flex"
+            src={"/assets/css-icon.png"}
+            width={128}
+            height={128}
+            alt="css-icon"
+          />
+          <p className="hidden text-base text-foreground font-normal lg:flex">
+            CSS
+          </p>
+        </div>
+        <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainer lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
+          <Image
+            className="w-8 h-8 lg:hidden"
             src={"/assets/js-framed-icon.png"}
             width={128}
             height={128}
             alt="js-framed-icon"
           />
-          <p className="text-base text-foreground font-normal">Javascript</p>
-        </div>
-        <div className="skill flex flex-row items-center gap-4">
+          <p className="text-base text-foreground font-normal lg:hidden">
+            Javascript
+          </p>
           <Image
-            className="w-8 h-8"
+            className="hidden w-24 h-24 lg:flex"
+            src={"/assets/js-icon.png"}
+            width={128}
+            height={128}
+            alt="js-icon"
+          />
+          <p className="hidden text-base text-foreground font-normal lg:flex">
+            Javascript
+          </p>
+        </div>
+        <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainer lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
+          <Image
+            className="w-8 h-8 lg:hidden"
             src={"/assets/figma-framed-icon.png"}
             width={128}
             height={128}
             alt="figma-framed-icon"
           />
-          <p className="text-base text-foreground font-normal">UI/UX Design</p>
+          <p className="text-base text-foreground font-normal lg:hidden">
+            UI/UX Design
+          </p>
+          <Image
+            className="hidden w-24 h-24 lg:flex"
+            src={"/assets/figma-icon.png"}
+            width={128}
+            height={128}
+            alt="figma-icon"
+          />
+          <p className="hidden text-base text-foreground font-normal lg:flex">
+            UI/UX Design
+          </p>
         </div>
       </div>
     </div>
