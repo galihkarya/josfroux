@@ -6,6 +6,7 @@
   --background: #f8fcfb;
   --foreground: #222423;
   --bgcontainer: #f8fcfb88;
+  --bgcontainersecondary: #f8fcfb88;
   --bgspecial: #EFF8F5;
   --bgcontainerspecial: #F3F7F4;
   --bgnav: #f8fcfbc0;
@@ -17,7 +18,8 @@
   :root {
     --background: #222423;
     --foreground: #f8fcfb;
-    --bgcontainer: #3f414144;
+    --bgcontainer: #22242344;
+    --bgcontainersecondary: #33363444;
     --bgspecial: #2B312F;
     --bgcontainerspecial: #2B312F;
     --bgnav: #232424ba;

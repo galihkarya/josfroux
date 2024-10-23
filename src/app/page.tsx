@@ -38,7 +38,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export default function Home() {
   return (
-    <div className="main-container relative h-full">
+    <div className="main-container relative h-full no-scrollbar">
       <NavBar />
 
       <div className="gradient-component-container absolute h-[40vh] bottom-96 inset-0 -translate-y-1/3 -z-50 ">
@@ -259,7 +259,7 @@ const Hero = () => {
             alt="figma-icon-glow"
           />
         </motion.div>
-        <div className="photo-container z-40 bg-bgcontainer flex flex-col w-fit h-fit gap-2 shadow-lg rounded-lg border-[0.5px] border-bordercolor backdrop-blur-md p-2 duration-200">
+        <div className="photo-container z-40 bg-bgcontainersecondary flex flex-col w-fit h-fit gap-2 shadow-lg rounded-lg border-[0.5px] border-bordercolor backdrop-blur-md p-2 duration-200">
           <div className="win-nav-container flex flex-row justify-between items-center px-1 py-1">
             <div className="button-nav-container flex flex-row gap-[0.35rem]">
               <div className="bg-[#FE5F57] h-[12px] w-[12px] rounded-full"></div>
@@ -335,7 +335,7 @@ const Skills = () => {
         WHAT I&apos;M GREAT AT
       </h1>
       <div className="skills flex flex-col gap-6 bg-bgcontainer border-[0.5px] border-bordercolor rounded-2xl shadow-lg p-8 lg:flex-row lg:border-0 lg:shadow-none lg:bg-none lg:justify-between lg:px-20">
-        <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainer lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
+        <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainersecondary lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
           <Image
             className="w-8 h-8 lg:hidden"
             src={"/assets/react-framed-icon.png"}
@@ -348,17 +348,17 @@ const Skills = () => {
           </p>
 
           <Image
-            className="hidden w-24 h-24 lg:flex"
+            className="hidden w-20 h-20 lg:flex"
             src={"/assets/reacts.png"}
             width={128}
             height={128}
             alt="reacts-icon"
           />
-          <p className="hidden text-base text-foreground font-normal lg:flex">
+          <p className="hidden text-base text-foreground font-normal text-center lg:flex">
             React
           </p>
         </div>
-        <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainer lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
+        <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainersecondary lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
           <Image
             className="w-8 h-8 lg:hidden"
             src={"/assets/html-framed-icon.png"}
@@ -370,17 +370,17 @@ const Skills = () => {
             HTML
           </p>
           <Image
-            className="hidden w-24 h-24 lg:flex"
+            className="hidden w-20 h-20 lg:flex"
             src={"/assets/html-icon.png"}
             width={128}
             height={128}
             alt="html-icon"
           />
-          <p className="hidden text-base text-foreground font-normal lg:flex">
+          <p className="hidden text-base text-foreground font-normal text-center lg:flex">
             HTML
           </p>
         </div>
-        <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainer lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
+        <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainersecondary lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
           <Image
             className="w-8 h-8 lg:hidden"
             src={"/assets/css-framed-icon.png"}
@@ -390,17 +390,17 @@ const Skills = () => {
           />
           <p className="text-base text-foreground font-normal lg:hidden">CSS</p>
           <Image
-            className="hidden w-24 h-24 lg:flex"
+            className="hidden w-20 h-20 lg:flex"
             src={"/assets/css-icon.png"}
             width={128}
             height={128}
             alt="css-icon"
           />
-          <p className="hidden text-base text-foreground font-normal lg:flex">
+          <p className="hidden text-base text-foreground font-normal text-center lg:flex">
             CSS
           </p>
         </div>
-        <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainer lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
+        <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainersecondary lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
           <Image
             className="w-8 h-8 lg:hidden"
             src={"/assets/js-framed-icon.png"}
@@ -412,17 +412,17 @@ const Skills = () => {
             Javascript
           </p>
           <Image
-            className="hidden w-24 h-24 lg:flex"
+            className="hidden w-20 h-20 lg:flex"
             src={"/assets/js-icon.png"}
             width={128}
             height={128}
             alt="js-icon"
           />
-          <p className="hidden text-base text-foreground font-normal lg:flex">
+          <p className="hidden text-base text-foreground font-normal text-center lg:flex">
             Javascript
           </p>
         </div>
-        <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainer lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
+        <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainersecondary lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
           <Image
             className="w-8 h-8 lg:hidden"
             src={"/assets/figma-framed-icon.png"}
@@ -434,13 +434,13 @@ const Skills = () => {
             UI/UX Design
           </p>
           <Image
-            className="hidden w-24 h-24 lg:flex"
+            className="hidden w-20 h-20 lg:flex"
             src={"/assets/figma-icon.png"}
             width={128}
             height={128}
             alt="figma-icon"
           />
-          <p className="hidden text-base text-foreground font-normal lg:flex">
+          <p className="hidden text-base text-foreground font-normal text-center lg:flex">
             UI/UX Design
           </p>
         </div>
@@ -453,21 +453,33 @@ const Projects = () => {
   const sortedProjects = [...projectsData].sort((a, b) => b.id - a.id);
 
   return (
-    <div id="project" className="recent-project-container py-6">
-      <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
-        RECENT PROJECTS
-      </h1>
-      <div className="projects-container flex flex-row gap-6 p-9 overflow-x-scroll ">
-        {sortedProjects.map((project) => (
-          <ProjectCard key={project.id} {...project} />
-        ))}
-        {/* <Link                   // design the page for more projects first
+    <div className="relative">
+      <Image
+        className="hidden absolute -z-50 top-24 left-16 lg:flex"
+        src={"/assets/tessaract.png"}
+        height={417}
+        width={375}
+        alt="tessaract-bg"
+      />
+      <div
+        id="project"
+        className="recent-project-container flex flex-col py-6 lg:bg-bgcontainer lg:backdrop-blur-sm lg:flex-row lg:items-center lg:justify-between"
+      >
+        <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center text-nowrap lg:absolute lg:left-28">
+          RECENT PROJECTS
+        </h1>
+        <div className="projects-container no-scrollbar flex flex-row gap-6 p-9 overflow-x-scroll lg:pl-[32rem] lg:left-0">
+          {sortedProjects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
+          {/* <Link                   // design the page for more projects first
           href={"#"}
           className="more flex flex-col gap-6 min-w-32 bg-bgcontainer rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-lg shadow-lg justify-center items-center"
-        >
+          >
           <MdArrowForward size={24} />
           <p className="text-base font-light">more</p>
-        </Link> */}
+          </Link> */}
+        </div>
       </div>
     </div>
   );
@@ -532,7 +544,7 @@ const Certifications = () => {
       <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
         CERTIFICATIONS
       </h1>
-      <div className="certifications-list-container flex flex-row gap-4 p-8 overflow-x-scroll">
+      <div className="certifications-list-container no-scrollbar flex flex-row gap-4 p-8 overflow-x-scroll">
         {fileteredCertificates
           .sort((a, b) => a.pinIndex - b.pinIndex)
           .map((certificate) => (
