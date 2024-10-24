@@ -41,7 +41,7 @@ export default function Home() {
     <div className="gradient-component-container flex w-screen relative">
       <Image
         src={"/assets/gradient-component.png"}
-        className="absolute object-cover -z-50 top-0 -translate-y-28 inset-0 h-auto w-screen min-w-72 max-w-5xl lg:-translate-y-64 lg:translate-x-24"
+        className="absolute object-cover -z-50 top-0 -translate-y-20 inset-0 h-auto w-screen min-w-72 max-w-5xl lg:-translate-y-64 lg:translate-x-0"
         // objectFit="cover"
         width={1502}
         height={2000}
@@ -114,11 +114,7 @@ const NavBar = () => {
 
   return (
     <nav className="navbar-container sticky top-0 z-[1000] flex flex-row h-fit bg-bgnav justify-between border-b-[0.5px] border-bordercolor items-center backdrop-blur-md py-4 px-4 lg:px-8">
-      <h1
-        className={`logo ${plusJakartaSans.className} font-bold text-xl text-foreground tracking-[0.1em]`}
-      >
-        &lt;gal/&gt;
-      </h1>
+      <Image src={'/assets/jfx5.png'} width={36} height={36} alt="jfx-logo" className="object-cover h-9 w-10"/>
       <AnimatePresence>{isModalOpen && <MoreModal />}</AnimatePresence>
       <button className="lg:hidden" onClick={toggleModal}>
         <MdMoreVert size={24} />
