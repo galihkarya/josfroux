@@ -1,7 +1,6 @@
 "use client";
 
 // import ThemeSwitcher from "@/components/themeSwitcher";
-import { Plus_Jakarta_Sans } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -29,12 +28,6 @@ import CertificateCard from "@/components/certificateCard";
 import { useState } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-plus-jakarta-sans",
-  weight: ["400", "700"],
-});
 
 export default function Home() {
   return (
