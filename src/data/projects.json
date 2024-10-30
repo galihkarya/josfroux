@@ -10,7 +10,8 @@
         "image1": "",
         "image2": "",
         "image3": "",
-        "github": ""
+        "github": "", 
+        "skillIcons": ["/assets/uiux-framed-icon.png", "/assets/figma-framed-icon.png"]
     },
     {
         "id": 1,   
@@ -23,7 +24,8 @@
         "image1": "",
         "image2": "",
         "image3": "",
-        "github": ""
+        "github": "", 
+        "skillIcons": ["/assets/uiux-framed-icon.png", "/assets/figma-framed-icon.png"]
     },
     {
         "id": 2,
@@ -36,7 +38,8 @@
         "image1": "",
         "image2": "",
         "image3": "",
-        "github": ""
+        "github": "", 
+        "skillIcons": ["/assets/uiux-framed-icon.png", "/assets/figma-framed-icon.png", "/assets/react-framed-icon.png"]
     },
     {
         "id": 3,
@@ -46,10 +49,11 @@
         "type": "Thesis Project: Capstone Design", 
         "year": 2024, 
         "coverImage": "/assets/projects/persona-cover-image.jpg",
-        "image1": "",
+        "image1": "/assets/projects/persona-detail1.png",
         "image2": "",
         "image3": "",
-        "github": "https://github.com/galihkarya/Persona_v0.0.3"
+        "github": "https://github.com/galihkarya/Persona_v0.0.3", 
+        "skillIcons": ["/assets/uiux-framed-icon.png", "/assets/figma-framed-icon.png", "/assets/react-framed-icon.png", "/assets/ml-framed-icon.png"]
     }, 
     {
         "id": 4,
@@ -58,10 +62,11 @@
         "moreDescription": "Gals Portfolio is my first personal portfolio website that showcases my works and projects. This website was created as a self-project in 2024, focusing on providing a platform to share my experiences and skills with others. The website features a clean and modern design, highlighting my projects.",
         "type": "Self Project", 
         "year": 2024, 
-        "coverImage": "/assets/projects/galsportfolio-cover-image.jpg",
+        "coverImage": "/assets/projects/galsportfolio-cover-image.png",
         "image1": "",
         "image2": "",
         "image3": "",
-        "github": "https://github.com/galihkarya/Portfolio-Website/tree/main/portfolio"
+        "github": "https://github.com/galihkarya/Portfolio-Website/tree/main/portfolio", 
+        "skillIcons": ["/assets/uiux-framed-icon.png", "/assets/figma-framed-icon.png", "/assets/next-icon.png", "/assets/tailwindcss-icon.png"]
     }
 ]
