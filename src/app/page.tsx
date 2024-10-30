@@ -5,11 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 import {
-  MdMoreVert,
+  
   MdOutlineFileDownload,
   MdSchool,
   MdMail,
-  MdClose,
+  MdArrowForward,
+  
 } from "react-icons/md";
 // import { MdArrowForward } from "react-icons/md";
 import { GoDotFill } from "react-icons/go";
@@ -25,16 +26,16 @@ import ExperienceCard from "@/components/experiencesCard";
 import certificateData from "@/data/certifications.json";
 import CertificateCard from "@/components/certificateCard";
 
-import { useState } from "react";
+import NavBar from "@/components/navBar";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <div className="gradient-component-container flex w-screen relative">
       <Image
         src={"/assets/gradient-component.png"}
-        className="absolute object-cover -z-50 top-0 -translate-y-20 inset-0 h-auto w-screen min-w-72 max-w-5xl lg:-translate-y-64 lg:translate-x-0"
+        className="absolute object-cover -z-50 top-0 -translate-y-20 inset-0 h-auto w-screen min-w-72 max-w-5xl blur-md opacity-70 lg:-translate-y-64 lg:translate-x-0"
         // objectFit="cover"
         width={1502}
         height={2000}
@@ -44,7 +45,7 @@ export default function Home() {
       <div className="main-container h-full no-scrollbar">
         <NavBar />
 
-        <div className="content-container z-10 flex flex-col gap-6 w-screen bg-bgcontainer backdrop-blur-lg overflow-x-hidden">
+        <div className="content-container z-10 flex flex-col gap-6 w-screen -lg overflow-x-hidden">
           <Hero />
           <Skills />
           <Projects />
@@ -57,72 +58,6 @@ export default function Home() {
     </div>
   );
 }
-
-const NavBar = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-  };
-
-  const MoreModal = () => {
-    return (
-      <motion.div
-        className="absolute top-2 right-2 z-[60] flex flex-col bg-bgcontainer rounded-xl border-[0.5px] border-bordercolor backdrop-blur-lg px-3 pb-3 pt-8 lg:hidden"
-        initial={{ scale: 0.95, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.95, opacity: 0 }}
-        transition={{
-          type: "spring",
-          stiffness: 200,
-          damping: 20,
-        }}
-        style={{ transformOrigin: "top right" }}
-      >
-        <button onClick={toggleModal}>
-          <MdClose className="absolute top-3 right-3" size={24} />
-        </button>
-        <div className="flex flex-col gap-7 font-semibold text-base text-nowrap p-4">
-          <a href="#hero" onClick={toggleModal}>
-            Home
-          </a>
-          <a href="#skill" onClick={toggleModal}>
-            Skills
-          </a>
-          <a href="#project" onClick={toggleModal}>
-            Projects
-          </a>
-          <a href="#experience" onClick={toggleModal}>
-            Experiences
-          </a>
-          <a href="#certification" onClick={toggleModal}>
-            Certifications
-          </a>
-          <a href="#contact" onClick={toggleModal}>
-            Social Media
-          </a>
-        </div>
-      </motion.div>
-    );
-  };
-
-  return (
-    <nav className="navbar-container sticky top-0 z-[1000] flex flex-row h-fit bg-bgnav justify-between border-b-[0.5px] border-bordercolor items-center backdrop-blur-md py-4 px-4 lg:px-8">
-      <Image src={'/assets/jfx5.png'} width={36} height={36} alt="jfx-logo" className="object-cover h-9 w-10"/>
-      <AnimatePresence>{isModalOpen && <MoreModal />}</AnimatePresence>
-      <button className="lg:hidden" onClick={toggleModal}>
-        <MdMoreVert size={24} />
-      </button>
-      <div className="hidden lg:flex flex-row gap-6 font-semibold text-sm ">
-        <a href="#hero">Home</a>
-        <a href="#skill">Skills</a>
-        <a href="#project">Projects</a>
-        <a href="#experience">Experiences</a>
-        <a href="#certification">Certifications</a>
-        <a href="#contact">Social Media</a>
-      </div>
-    </nav>
-  );
-};
 
 const Hero = () => {
   return (
@@ -441,12 +376,12 @@ const Skills = () => {
 };
 
 const Projects = () => {
-  const sortedProjects = [...projectsData].sort((a, b) => b.id - a.id);
+  const sortedProjects = [...projectsData].sort((a, b) => b.id - a.id).slice(0, 4);
 
   return (
     <div className="project-background-container relative">
       <Image
-        className="hidden absolute -z-50 top-24 left-16 lg:flex"
+        className="hidden absolute -z-50 top-24 left-16 blur-md lg:flex"
         src={"/assets/tessaract.png"}
         height={417}
         width={375}
@@ -454,22 +389,22 @@ const Projects = () => {
       />
       <div
         id="project"
-        className="recent-project-container flex flex-col py-6 lg:bg-bgcontainer lg:backdrop-blur-sm lg:flex-row lg:items-center lg:justify-between"
+        className="recent-project-container flex flex-col py-6 lg:bg-bgcontainer lg:backdrop-blur-none lg:flex-row lg:items-center lg:justify-between"
       >
         <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center text-nowrap lg:absolute lg:left-28">
           RECENT PROJECTS
         </h1>
-        <div className="projects-container no-scrollbar flex flex-row gap-6 p-9 overflow-x-scroll lg:pl-[32rem] lg:left-0">
+        <div className="projects-container no-scrollbar flex flex-row gap-6 p-9 overflow-x-scroll lg:z-10 lg:pl-[32rem] lg:left-0">
           {sortedProjects.map((project) => (
             <ProjectCard key={project.id} {...project} />
           ))}
-          {/* <Link                   // design the page for more projects first
-          href={"#"}
-          className="more flex flex-col gap-6 min-w-32 bg-bgcontainer rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-lg shadow-lg justify-center items-center"
+          <Link            
+          href={"/projects"}
+          className="more flex flex-col gap-6 min-w-32 bg-bgcontainer rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-none shadow-lg justify-center items-center"
           >
           <MdArrowForward size={24} />
           <p className="text-base font-light">more</p>
-          </Link> */}
+          </Link>
         </div>
       </div>
     </div>
@@ -543,7 +478,7 @@ const Certifications = () => {
           ))}
         {/* <Link // design the page for more certificate first
           href={"#"}
-          className="more flex flex-col gap-6 min-w-32 bg-bgcontainer rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-lg shadow-lg justify-center items-center lg:hidden"
+          className="more flex flex-col gap-6 min-w-32 bg-bgcontainer rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-none shadow-lg justify-center items-center lg:hidden"
         >
           <MdArrowForward size={24} />
           <p className="text-base font-light">more</p>
