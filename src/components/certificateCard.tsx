@@ -15,7 +15,7 @@ interface CertificateProps {
 
 const CertificateCard = (certificate: CertificateProps) => {
   return (
-    <div className="certificate-card flex flex-col min-w-80 bg-bg-bgcontainersecondary rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-lg shadow-lg">
+    <div className="certificate-card flex flex-col min-w-80 bg-bg-bgcontainersecondary rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-none shadow-lg">
       <Image
         className="flex min-h-1/2 rounded-t-2xl "
         src={certificate.imgsrc}
