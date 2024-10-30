@@ -5,8 +5,8 @@
 :root {
   --background: #f8fcfb;
   --foreground: #222423;
-  --bgcontainer: #f8fcfb88;
-  --bgcontainersecondary: #f8fcfb88;
+  --bgcontainer: #f8fcfb4a;
+  --bgcontainersecondary: #f8fcfbba;
   --bgspecial: #EFF8F5;
   --bgcontainerspecial: #F3F7F4;
   --bgnav: #f8fcfbc0;
@@ -18,8 +18,8 @@
   :root {
     --background: #222423;
     --foreground: #f8fcfb;
-    --bgcontainer: #22242344;
-    --bgcontainersecondary: #33363444;
+    --bgcontainer: #2224234a;
+    --bgcontainersecondary: #333634ba;
     --bgspecial: #2B312F;
     --bgcontainerspecial: #2B312F;
     --bgnav: #232424ba;
@@ -38,7 +38,6 @@ body {
   color: var(--foreground);
   background: var(--background);
   transition: background-color 0.3s, color 0.3s;
-  
   overflow-x: hidden;
 }
 
