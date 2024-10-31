@@ -27,6 +27,7 @@ import certificateData from "@/data/certifications.json";
 import CertificateCard from "@/components/certificateCard";
 
 import NavBar from "@/components/navBar";
+import Footer from "@/components/footer";
 
 import { motion } from "framer-motion";
 
@@ -41,7 +42,6 @@ export default function Home() {
         height={2000}
         alt="gradient-component-1"
       />
-
       <div className="main-container h-full no-scrollbar">
         <NavBar />
 
@@ -525,54 +525,3 @@ const Contact = () => {
   );
 };
 
-const Footer = () => {
-  return (
-    <div className="footer-container bg-[#222227] flex flex-col p-8 gap-3">
-      <p className="font-normal text-sm text-center text-[#f8fcfb] opacity-50">
-        handcrafted from the ground with &#x1F499;{" "}
-      </p>
-      <div className="icons-container flex flex-row gap-6 justify-center">
-        <Image
-          src={"/assets/figma-icon.png"}
-          className="text-foreground"
-          width={16}
-          height={16}
-          alt="figma-icon"
-        />
-        <Image
-          src={"/assets/next-icon.png"}
-          width={16}
-          height={16}
-          alt="next-icon"
-        />
-        <Image
-          src={"/assets/html-icon.png"}
-          width={16}
-          height={16}
-          alt="html-icon"
-        />
-        <Image
-          src={"/assets/css-icon.png"}
-          width={16}
-          height={16}
-          alt="css-icon"
-        />
-        <Image
-          src={"/assets/js-icon.png"}
-          width={16}
-          height={16}
-          alt="js-icon"
-        />
-        <Image
-          src={"/assets/tailwindcss-icon.png"}
-          width={20}
-          height={16}
-          alt="tailwindcss-icon"
-        />
-      </div>
-      <p className="font-normal text-sm text-center text-[#f8fcfb] opacity-50">
-        2024
-      </p>
-    </div>
-  );
-};
