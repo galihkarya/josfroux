@@ -151,7 +151,7 @@ const ModalDetailedCertification = ({
           onClick={closeModal}
           className="sticky z-10 top-0 -translate-y-8 -translate-x-4 self-start bg-[#FE5F57] p-0.5 rounded-full"
         >
-          <MdClose className="text-foreground opacity-0 hover:opacity-50" size={14} />
+          <MdClose className=" opacity-0 hover:opacity-50" size={14} />
         </button>
         <div className="detailed-certification-container flex flex-col gap-6">
           <div className="header-container flex flex-col gap-6 justify-between lg:flex-row">

@@ -145,7 +145,7 @@ const ModalDetailedProject = ({
       exit={{ opacity: 0 }}
     >
       <motion.div
-        className="modal-content relative bg-background flex flex-col h-full max-h-[700px] w-full px-8 pt-8 pb-8 rounded-xl shadow-lg overflow-y-auto overflow-x-hidden"
+        className="modal-content relative bg-background flex flex-col h-full max-h-[700px] w-full px-8 pt-12 pb-8 rounded-xl shadow-lg overflow-y-auto overflow-x-hidden"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ type: "tween", duration: 0.3 }}
@@ -155,7 +155,7 @@ const ModalDetailedProject = ({
           onClick={closeModal}
           className="sticky z-10 top-0 -translate-y-8 -translate-x-4 self-start bg-[#FE5F57] p-0.5 rounded-full"
         >
-          <MdClose className="text-foreground opacity-0 hover:opacity-50" size={14} />
+          <MdClose className="opacity-0 hover:opacity-50" size={14} />
         </button>
         <div className="detailed-project-container-mobile flex flex-col gap-6 lg:relative lg:px-0">
           <div className="title-container flex flex-row gap-6 items-center justify-between lg:hidden">
