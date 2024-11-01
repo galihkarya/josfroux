@@ -189,7 +189,7 @@ const ModalDetailedCertification = ({
             </p>
             <ul className="flex flex-col gap-2 pl-4">
               {certificationData.descriptions.map((description) => (
-                <li className="font-normal text-sm text-foreground list-disc list-outside">
+                <li key={description} className="font-normal text-sm text-foreground list-disc list-outside">
                   {description}
                 </li>
               ))}
