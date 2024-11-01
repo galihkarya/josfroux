@@ -476,14 +476,17 @@ const Certifications = () => {
           .map((certificate) => (
             <CertificateCard key={certificate.pinIndex} {...certificate} />
           ))}
-        {/* <Link // design the page for more certificate first
-          href={"#"}
+        <Link 
+          href={"/certifications"}
           className="more flex flex-col gap-6 min-w-32 bg-bgcontainer rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-none shadow-lg justify-center items-center lg:hidden"
         >
           <MdArrowForward size={24} />
           <p className="text-base font-light">more</p>
-        </Link> */}
+        </Link>
       </div>
+      <Link href={"/certifications"} className="hidden w-fit bg-background px-3 py-1 rounded-md shadow-md text-[#088395] border-[0.5px] border-bordercolor self-center lg:block">
+          view more
+      </Link>
     </div>
   );
 };
