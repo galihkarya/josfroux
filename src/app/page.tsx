@@ -493,11 +493,11 @@ const Certifications = () => {
 
 const Contact = () => {
   return (
-    <div id="contact" className="contact-container flex flex-col">
+    <div id="contact" className="contact-container flex flex-col gap-6 items-center">
       <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
         WAYS TO FIND ME
       </h1>
-      <div className="social-media-container flex flex-row py-8 px-36 items-center justify-between md:px-8 lg:px-0 lg:gap-16 lg:max-w-7xl lg:self-center">
+      <div className="social-media-container flex flex-row items-center gap-12 md:gap-14 lg:gap-16 ">
         <Link
           href={"https://www.instagram.com/galihkarya_g"}
           className="instagram-container flex flex-row gap-3"
