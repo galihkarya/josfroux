@@ -102,31 +102,29 @@ const Projects = ({
   openModal: (project: Project) => void;
 }) => {
   return (
-    <div>
-      <a
-        className="project-container flex flex-row gap-3 items-center lg:flex-col lg:items-start"
-        onClick={() => openModal(projectData)}
-      >
-        <Image
-          src={projectData.coverImage}
-          alt={projectData.title}
-          className="object-cover w-auto h-20 rounded-lg lg:rounded-none lg:h-36"
-          width={1381}
-          height={780}
-        />
-        <div className="project-text-cover flex flex-col gap-1">
-          <p className="font-normal text-xs text-foreground opacity-50">
-            {projectData.year}
-          </p>
-          <h2 className="font-bold text-base text-foreground">
-            {projectData.title}
-          </h2>
-          <p className="font-normal text-xs text-foreground opacity-50">
-            {projectData.type}
-          </p>
-        </div>
-      </a>
-    </div>
+    <button
+      className="project-container flex flex-row gap-3 items-center lg:p-4 lg:flex-col lg:items-start hover:bg-bgspecial hover:rounded-md hover:border-bordercolor duration-200"
+      onClick={() => openModal(projectData)}
+    >
+      <Image
+        src={projectData.coverImage}
+        alt={projectData.title}
+        className="object-cover w-auto h-20 rounded-lg lg:rounded-none lg:h-auto lg:w-max"
+        width={1381}
+        height={780}
+      />
+      <div className="project-text-cover flex flex-col gap-1 items-start">
+        <p className="font-normal text-xs text-foreground opacity-50">
+          {projectData.year}
+        </p>
+        <h2 className="font-bold text-base text-foreground">
+          {projectData.title}
+        </h2>
+        <p className="font-normal text-xs text-foreground opacity-50">
+          {projectData.type}
+        </p>
+      </div>
+    </button>
   );
 };
 
