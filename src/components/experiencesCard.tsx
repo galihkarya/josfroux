@@ -14,7 +14,7 @@ interface ExperienceProps {
 
 const ExperiencesCard = (experience: ExperienceProps) => {
   return (
-    <div className="experiences-card p-[0.5px] rounded-2xl bg-gradient-to-r bg-clip-border from-[#64EDAE] to-[#088395] shadow-lg">
+    <div className="experiences-card p-[0.6px] rounded-2xl bg-gradient-to-r bg-clip-border from-[#64EDAE] to-[#088395] shadow-lg">
       <div className="bg-bgcontainerspecial p-4 rounded-2xl">
         <h4 className="text-sm font-semibold">
           {" "}

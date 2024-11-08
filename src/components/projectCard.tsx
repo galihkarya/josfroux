@@ -15,7 +15,7 @@ interface ProjectProps {
 
 const ProjectCard = (project: ProjectProps) => {
   return (
-    <div className=" project-card flex flex-col min-w-80 bg-bgcontainersecondary rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-md shadow-lg lg:min-w-96">
+    <div className=" project-card flex flex-col min-w-80 bg-bgcontainersecondary rounded-2xl border-[0.5px] border-bordercolor backdrop-blur-md shadow-lg lg:min-w-96 hover:bg-bgcontainer duration-200">
       <Image
         className="flex min-h-1/2 rounded-t-2xl "
         src={project.coverImage}
