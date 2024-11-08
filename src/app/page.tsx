@@ -150,35 +150,35 @@ const Hero = () => {
           }}
         >
           <Image
-            className="absolute -z-10 -top-16 left-0 transform translate-x-20 hover:-translate-y-2 duration-200 lg:translate-x-32"
+            className="absolute -z-10 -top-16 left-0 transform translate-x-20 hover:-translate-y-2 hover:scale-110 duration-200 lg:translate-x-32"
             src={"/assets/react-icon-glow.png"}
             height={100}
             width={100}
             alt="react-icon-glow"
           />
           <Image
-            className="absolute -z-10 top-12 -left-24 transform translate-x-1/2 -rotate-[65deg] hover:-translate-y-2 duration-200 lg:top-16"
+            className="absolute -z-10 top-12 -left-24 transform translate-x-1/2 -rotate-[65deg] hover:-translate-y-2 hover:scale-110 duration-200 lg:top-16"
             src={"/assets/html-icon-glow.png"}
             height={64}
             width={64}
             alt="html-icon-glow"
           />
           <Image
-            className="absolute -z-10 top-20 -right-24 transform -translate-x-1/2 rotate-[70deg] hover:-translate-y-2 duration-200"
+            className="absolute -z-10 top-20 -right-24 transform -translate-x-1/2 rotate-[70deg] hover:-translate-y-2 hover:scale-110 duration-200"
             src={"/assets/js-icon-glow.png"}
             height={64}
             width={64}
             alt="js-icon-glow"
           />
           <Image
-            className="absolute -z-10 top-56 -left-24 transform translate-x-1/2 -rotate-[110deg] hover:-translate-y-2 duration-200 lg:top-80"
+            className="absolute -z-10 top-56 -left-24 transform translate-x-1/2 -rotate-[110deg] hover:-translate-y-2 hover:scale-110 duration-200 lg:top-80"
             src={"/assets/css-icon-glow.png"}
             height={64}
             width={64}
             alt="css-icon-glow"
           />
           <Image
-            className="absolute -z-10 top-64 -right-24 transform -translate-x-1/2 rotate-[100deg] hover:-translate-y-2 duration-200 lg:top-72"
+            className="absolute -z-10 top-64 -right-24 transform -translate-x-1/2 rotate-[100deg] hover:-translate-y-2 hover:scale-110 duration-200 lg:top-72"
             src={"/assets/figma-icon-glow.png"}
             height={64}
             width={64}
@@ -198,7 +198,7 @@ const Hero = () => {
           </div>
           <Image
             src={"/assets/graduation-photo.png"}
-            className="w-60 h-auto rounded-xl lg:w-80"
+            className="w-60 h-auto rounded-xl lg:w-80 duration-200"
             height={1296}
             width={971}
             alt="graduation-photo"
@@ -260,7 +260,7 @@ const Skills = () => {
       <h1 className="bg-gradient-to-r from-subtitlel to-subtitler bg-clip-text text-transparent font-bold text-2xl text-center">
         WHAT I&apos;M GREAT AT
       </h1>
-      <div className="skills flex flex-col gap-6 bg-bgcontainer border-[0.5px] border-bordercolor rounded-2xl shadow-lg p-8 lg:flex-row lg:border-0 lg:shadow-none lg:bg-none lg:justify-between lg:px-20">
+      <div className="skills flex flex-col gap-6 bg-bgcontainer border-[0.5px] border-bordercolor rounded-2xl shadow-lg p-8 lg:flex-row lg:border-0 lg:shadow-none lg:bg-none lg:justify-evenly lg:px-20">
         <div className="skill flex flex-row items-center gap-4 lg:flex-col lg:bg-bgcontainersecondary lg:shadow-lg lg:px-8 lg:py-6 lg:rounded-2xl">
           <Image
             className="w-8 h-8 lg:hidden"
