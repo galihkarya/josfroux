@@ -11,6 +11,8 @@ interface ProjectProps {
   image2?: string;
   image3?: string;
   github?: string;
+  skillIcons: string[];
+  liveUrl: string;
 }
 
 const ProjectCard = (project: ProjectProps) => {
@@ -27,16 +29,28 @@ const ProjectCard = (project: ProjectProps) => {
       <div className="project-card-content flex flex-col gap-6 p-6">
         <h3 className="font-medium text-lg">{project.title}</h3>
         <p>{project.description}</p>
-        {project.github && (
-          <Link
-            className=" w-fit"
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub className="opacity-70" size={24} />
-          </Link>
-        )}
+        <div className="flex flex-row justify-between">
+          {project.github && (
+            <Link
+              className=" w-fit"
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="opacity-70" size={24} />
+            </Link>
+          )}
+          {project.liveUrl && (
+            <Link
+              className="w-fit bg-bgcontainer border-[0.5px] border-bordercolor px-2 py-1 rounded-lg shadow-md"
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Hands on
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -63,7 +63,7 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="hero-container flex flex-col lg:flex-row lg:justify-between gap-12 items-center pt-14 px-4 lg:px-32 lg:pt-36 lg:pb-24"
+      className="hero-container flex flex-col lg:flex-row lg:justify-between gap-12 items-center pt-14 px-4 lg:px-32 xl:px-52 lg:pt-36 lg:pb-24"
     >
       <div className="greeting-container flex flex-col gap-6 pb-4 lg:gap-16 ">
         <motion.h1
